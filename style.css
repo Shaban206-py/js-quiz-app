@@ -45,3 +45,9 @@ li{
 #btn:active{
     transform: translateY(2px);
 }
+#Timer{
+    font-size: large;
+    font-weight: 600px;
+    padding: 4px;
+    box-shadow: 0px 0px 2px 1px purple;
+}

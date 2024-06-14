@@ -1,5 +1,30 @@
 let id = (id) => document.getElementById(id);
 let query = (q) => document.querySelectorAll(q);
+let TimeElement = document.getElementById('Timer');
+let currentQuestion =0;
+    let Score =0;
+    let Time;
+    const TotalTime = 7;
+        let sec = TotalTime;
+        //Add Timer Function
+        function Timer(){
+                TimeElement.innerHTML = sec;
+                sec--;
+                if(sec==0){
+                    sec = TotalTime;
+                    clearInterval(Time);
+                    currentQuestion++;
+                    ShowQuestion();
+
+                }
+        }
+        function ShowQuestion(){
+            sec = TotalTime;
+            clearInterval(Time);
+            Timer();
+            Time = setInterval(Time,1000);
+            
+        }
 let question = id('header');
 let a = id('opt1');
 let b = id('opt2');
@@ -7,6 +32,7 @@ let c = id('opt3');
 let d = id('opt4');
 let btn = id('btn');
 let option = query('.ques');
+
 
 // Making question
 
