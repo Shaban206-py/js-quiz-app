@@ -45,9 +45,15 @@ li{
 #btn:active{
     transform: translateY(2px);
 }
+<<<<<<< HEAD
 #Timer{
     font-size: large;
     font-weight: 600px;
     padding: 4px;
     box-shadow: 0px 0px 2px 1px purple;
+=======
+#score{
+    font-size: 20px;
+    margin-bottom: 20px;
+>>>>>>> feature/add-score-tracking
 }
