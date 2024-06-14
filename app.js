@@ -7,6 +7,7 @@ let c = id('opt3');
 let d = id('opt4');
 let btn = id('btn');
 let option = query('.ques');
+let scores =0;
 
 // Making question
 
@@ -72,6 +73,13 @@ let load_quiz = () => {
     c.innerText = quizdata.c;
     d.innerText = quizata.d;
 };
+let answer = event.target.getAttribute('data-answer');
+if (answer === 'correct') {
+    score++;
+    document.getElementById('score').innerText = 'Score: ' + score;
+}
+alert('Quiz Ended. Your score: ' + score + '. Your time: ' + document.getElementById('timer').innerText);
+
 
 load_quiz();
 
